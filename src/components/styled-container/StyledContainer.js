@@ -1,13 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledContainer = () => {
+const StyledContainer = ({container}) => {
     return (
-        <StyledContain>
-            <div className='container'>
-
-            </div>
-        </StyledContain>
+        <StyledContain>{container}</StyledContain>
     )
 }
 
