@@ -9,19 +9,19 @@ const Navbar = ()=>{
             <StyledContainer>
                 <ul>
                     <li>
-                        <a href='#'><p>buy</p></a>
+                        <a href='www'><p>buy</p></a>
                     </li>
                     <li>
-                        <a href='#'><p>sell</p></a>
+                        <a href='www'><p>sell</p></a>
                     </li>
                     <li>
                         <img src={Logo} alt='company-logo' className='company-logo'/>
                     </li>
                     <li>
-                        <a href='#'><p>rent</p></a>
+                        <a href='www'><p>rent</p></a>
                     </li>
                     <li>
-                        <a href='#'><p>lease</p></a>
+                        <a href='www'><p>lease</p></a>
                     </li>
                 </ul>
             </StyledContainer>
