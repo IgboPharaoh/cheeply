@@ -3,16 +3,16 @@ import styled from 'styled-components'
 
 const StyledContainer = ({children}) => {
     return (
-        <StyledContain>{children}</StyledContain>
+        <Wrapper>{children}</Wrapper>
     )
 }
 
-const StyledContain = styled.div`
-    /* .container{ */
-        width: 1200px;
-        border: 1px solid white;
+const Wrapper = styled.div`
+   
+        padding: 3rem 2rem;
+        border: 1px solid red;
         margin: 0 auto;
-    /* } */
+
     @media(max-width:768px){
         width: 720px;
     }
