@@ -1,12 +1,10 @@
 import './App.css'
-import StyledInput from './components/input/StyledInput';
-import Navbar from './components/navbar/Navbar';
+import LandingPage from './components/pages/LandingPage';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <StyledInput placeholder="YOUR NAME"/>
+      <LandingPage/>
     </div>
   );
 }

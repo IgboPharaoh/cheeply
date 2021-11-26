@@ -1,60 +1,65 @@
 import React from 'react'
 import styled from 'styled-components'
-import StyledContainer from '../styled-container/StyledContainer';
 import Logo from '../../assets/svgs/big-logo.svg'
+import Menu from '../../assets/svgs/menu.svg'
+import Saved from '../../assets/svgs/saved.svg'
 
 const Navbar = ()=>{
     return (
         <StyledNavbar>
-            <StyledContainer>
                 <ul>
+                    <div className="explore">
+                      <li>
+                        <a href="www">
+                          <img src={Menu} alt='menu-icon' className='menu-icon'/>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='www'>explore</a>
+                      </li>
+                    </div>
+                    
                     <li>
-                        <a href='www'><p>buy</p></a>
-                    </li>
-                    <li>
-                        <a href='www'><p>sell</p></a>
-                    </li>
-                    <li>
+                      <a href='http://'>
                         <img src={Logo} alt='company-logo' className='company-logo'/>
+                      </a>
+                        
                     </li>
                     <li>
-                        <a href='www'><p>rent</p></a>
+                      <a href='http://'>
+                        <img src={Saved} alt='saved-icon' className='saved-icon'/>
+                      </a>
                     </li>
-                    <li>
-                        <a href='www'><p>lease</p></a>
-                    </li>
-                </ul>
-            </StyledContainer>
-            
+                </ul>           
         </StyledNavbar>
     )
 }
 
 const StyledNavbar = styled.nav`
   width: 100%;
-  background-color: #002e4c;
+  margin: 0 auto;
+  color: white;
   ul {
-    list-style: none;
-    text-decoration: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    align-self: center;
   }
+  .explore{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 5rem;
+    }
   ul li a {
-    list-style: none;
     text-decoration: none;
-    color: #e5e5e5;
-    font-weight: 500;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.75rem;
     text-transform: capitalize;
   }
-  a:hover {
+  a:hover{
     color: #2eaba9;
-    border-bottom: 2
-    px solid #2eaba9;
-  }
-  li img {
-    height: 3rem;
-    width: 3rem;
   }
 `;
 

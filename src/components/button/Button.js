@@ -64,7 +64,7 @@ const AnchorButton = styled.a`
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   padding-top: ${({ buttonPaddingTnB }) => buttonPaddingTnB || 0.5}rem;
   padding-bottom: ${({ buttonPaddingTnB }) => buttonPaddingTnB || 0.5}rem;
-  background-color: ${({ backgroundColor }) => backgroundColor || "#E5E5E5"};
+  background-color: ${({ buttonBackgroundColor }) => buttonBackgroundColor || "#E5E5E5"};
   border-radius: ${({ borderRadius }) => borderRadius || 0.25}rem;
 `;
 
@@ -74,15 +74,19 @@ const StyledButton = styled.button`
   font-weight: ${({ fontWeight }) => fontWeight || 100};
   padding-top: ${({ buttonPaddingTnB }) => buttonPaddingTnB || 0.5}rem;
   padding-bottom: ${({ buttonPaddingTnB }) => buttonPaddingTnB || 0.5}rem;
-  background-color: ${({ backgroundColor }) => backgroundColor || "#E5E5E5"};
+  background-color: ${({ buttonBackgroundColor }) => buttonBackgroundColor || "#E5E5E5"};
   border-radius: ${({ borderRadius }) => borderRadius || 0.25}rem;
   border-color: transparent;
   border-left: 1px solid #E5E5E5;
-  width: 100%;
   border-bottom-left-radius: ${({borderBottomLeftRadius}) => borderBottomLeftRadius || 0}rem;
   border-bottom-right-radius:${({borderBottomRightRadius}) => borderBottomRightRadius || 0}rem;
   border-top-right-radius: ${({borderTopRightRadius}) => borderTopRightRadius || 0}rem;
   border-top-left-radius: ${({borderTopLeftRadius}) => borderTopLeftRadius || 0}rem ;
+  font-family: inherit;
+  
+  :hover{
+    color: red;
+  }
 `;
 
 export default Button
