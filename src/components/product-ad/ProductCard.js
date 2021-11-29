@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import favouriteIcon from '../../../assets/svgs/favorite-icon.svg'
+import favouriteIcon from '../../assets/svgs/favorite-icon.svg'
 
 const ProductCard = ({price, propertyDesc, address, agency, propertyImg}) => {
     return (
