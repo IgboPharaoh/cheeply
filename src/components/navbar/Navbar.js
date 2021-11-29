@@ -62,7 +62,7 @@ const StyledNavbar = styled.nav`
     margin-top: 1rem;
   }
   a:hover{
-    color: #2eaba9;
+    color: #2EABA9;
   }
   @media(min-width: 500px) and (max-width:1024px){
     ul{
