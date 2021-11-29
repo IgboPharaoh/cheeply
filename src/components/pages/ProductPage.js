@@ -39,9 +39,10 @@ const StlyedPage = styled.section`
     display: grid;
     grid-template-rows: 1fr 2fr 2fr;
     height: 100vh;
-    background-color:#efefef;
+    background-color:#fff;
     grid-gap: 2rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
+    
     /* IMAGES  and POSITIONING */
     section{
         display: grid;
@@ -104,7 +105,7 @@ const StlyedPage = styled.section`
     /* MEDIA QUERIES */
     @media(max-width:768px){
         grid-gap: 1rem;
-        padding: 1rem;
+        padding: 4rem 1rem;
         & section{
             grid-gap: 1rem;
         }
@@ -132,8 +133,11 @@ const StlyedPage = styled.section`
         .product-section-tagline a{
         padding-top: 1rem;
         }
+        a{
+            padding-top: .5rem;
+            font-size:.5rem;
+        }
     }
-
 `
 
 export default ProductPage
