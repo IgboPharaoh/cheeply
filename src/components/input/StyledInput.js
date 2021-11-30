@@ -11,7 +11,7 @@ const StyledInput = ({
   fontWeight,
   sectionBorder,
   color,
-  backgroundColor,
+  inputBackgroundColor,
   sectionWidth,
   sectionHeight,
   sectionBackgroundColor
@@ -26,10 +26,10 @@ const StyledInput = ({
         fontSize={fontSize}
         fontWeight={fontWeight}
         color={color}
-        backgroundColor={backgroundColor}
+        inputBackgroundColor={inputBackgroundColor}
       />
       <div>
-        <Button buttonBackgroundColor='#e5e5e5' fontSize='0.5' buttonText="SHOW MORE" fontWeight='800' />
+        <Button buttonWidth='100%' buttonHeight='100%' buttonBackgroundColor='#fff' fontSize='0.75' buttonText="SUBSCRIBE" fontWeight='600' border='none'/>
       </div>
     </Section>
   );
@@ -38,26 +38,26 @@ const StyledInput = ({
 const Section = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: ${({sectionBackgroundColor}) => sectionBackgroundColor || '#e5e5e5'};
-    width: ${({sectionWidth}) => sectionWidth || ''}rem;
-    height: ${({sectionHeight}) => sectionHeight || ''}rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: ${({sectionBackgroundColor}) => sectionBackgroundColor || ''};
+    width: ${({sectionWidth}) => sectionWidth || ''};
+    height: ${({sectionHeight}) => sectionHeight || ''};
     border: ${({sectionBorder}) => sectionBorder || '1px solid #E5E5E5'};
     input{
         flex: 1;
-        font-size:${({fontSize}) => fontSize || 0.5}rem;
-        font-weight: ${({fontWeight}) => fontWeight || 800};
+        font-size:${({fontSize}) => fontSize || '0.75'}rem;
+        font-weight: ${({fontWeight}) => fontWeight || 600};
         font-family: inherit;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
         outline: none;
         border-radius: 0rem;
         color: ${({color}) => color || '#002e4c'};
         border: 1px solid #e5e5e5;
-        background-color:${({backgroundColor}) => backgroundColor || '#fff'} ;
+        z-index: 10;
+        background-color:${({inputBackgroundColor}) => inputBackgroundColor || '#efefef'} ;
     }
     input:active, input:focus{
-      outline: 1px solid #e5e5e5 ;
-      border: 0.1px solid #002e4c;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     }
     input::placeholder{
       color: #002e4c;
@@ -66,6 +66,9 @@ const Section = styled.div`
     @media(max-width:768px){
       display:grid;
       grid-template-columns:2fr 1fr;
+    }
+    @media(max-width:500px){
+      
     }
 `
 

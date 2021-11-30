@@ -105,7 +105,7 @@ const StlyedPage = styled.section`
         z-index:10;
     }& .product-section-tagline a{
         color: inherit;
-        padding-top: 2rem;
+        padding: 2rem 0;
         font-size: 0.825rem;
         font-weight: 500;
     }
