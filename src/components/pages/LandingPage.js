@@ -16,6 +16,8 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="page-img" >
+                    <div className="overlay">
+                    </div>
                 </div>
             </div>
            
@@ -28,6 +30,7 @@ const StlyedPage = styled.div`
     color: #fff;
     .nav-bar{
         position: absolute;
+        z-index: 10;
     }
     .page-wrapper{
     display: grid;
@@ -68,7 +71,18 @@ const StlyedPage = styled.div`
         background-image:url(${backgroundImage});
         background-size: cover;
         background-repeat: no-repeat;
-  }
+        position: relative;
+        .overlay{
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom:0rem;
+            left: 0rem;
+            opacity: 0.1;
+        }
+    }
 
   @media(min-width: 500px) and (max-width:1024px){
     .page-wrapper{

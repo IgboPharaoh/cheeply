@@ -14,7 +14,7 @@ const ProductPage = () => {
             </div>
             <section className='product-section-1'>
                 <div className='rent-tab'>
-                    <h5>Selling Houses</h5>
+                    <h5>Renting Houses</h5>
                     <a href='http://www'>DISCOVER</a>
                     <div className="overlay">
                     </div>
