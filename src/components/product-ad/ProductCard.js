@@ -36,8 +36,8 @@ const StyledCard = styled.div`
     }
     .favourite-icon{
         position: absolute;
-        top: 8rem;
-        right: 1.5rem;
+        top: 1rem;
+        right: 1rem;
     }
     .property-price{
         font-size: 1.5rem;

@@ -14,22 +14,30 @@ const ProductPage = () => {
             </div>
             <section className='product-section-1'>
                 <div className='rent-tab'>
-                    <h5>Rent a House</h5>
-                    <a href='http://'>DISCOVER</a>
-                </div>
+                    <h5>Selling Houses</h5>
+                    <a href='http://www'>DISCOVER</a>
+                    <div className="overlay">
+                    </div>
+                </div>            
                 <div className='sell-tab'>
                     <h5>Selling Houses</h5>
                     <a href='http://www'>DISCOVER</a>
-                </div>
+                    <div className="overlay">
+                    </div>
+                </div>            
             </section >
             <section className='product-section-2'>
                 <div className='lease-tab'>
                     <h5>Lease a House</h5>
                     <a href='http://'>DISCOVER</a>
+                    <div className="overlay">
+                    </div>
                 </div>
                 <div className='buy-tab'>
                     <h5>Buy a House</h5>
                     <a href='http://www'>DISCOVER</a>
+                    <div className="overlay">
+                    </div>
                 </div>
             </section>
         </StlyedPage>
@@ -42,13 +50,23 @@ const StlyedPage = styled.section`
     background-color:#fff;
     grid-gap: 2rem;
     padding: 4rem 2rem;
-    
+
     /* IMAGES  and POSITIONING */
     section{
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 2rem;
         color: #fff;
+    }
+    .overlay{
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom:0rem;
+        left: 0rem;
+        opacity: 0.2;
+        
     }
     .product-section-2{
         grid-template-columns: 1fr 2fr;
@@ -75,7 +93,8 @@ const StlyedPage = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 2rem;
+        padding: 2rem; 
+        position: relative;       
     } & a {
         color: white;
         font-size: 0.625rem;
@@ -83,18 +102,19 @@ const StlyedPage = styled.section`
         display: inline-block;
         padding-top: 1rem;
         width: fit-content;
+        z-index:10;
     }& .product-section-tagline a{
         color: inherit;
-        letter-spacing: 0.05rem;
-        font-weight:700;
         padding-top: 2rem;
+        font-size: 0.825rem;
+        font-weight: 500;
     }
-    
     /* FONT STYLING */
 
     h5{
         font-size:1.25rem;
         font-weight: 300;
+        z-index:10;
     } & .product-section-tagline h5{
         font-size:2rem;
         line-height:2.5rem;
