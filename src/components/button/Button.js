@@ -97,7 +97,8 @@ const StyledButton = styled.button`
     color: #2EABA9;
   }
   @media(max-width:500px){
-    font-size: 0.5rem;
+    font-size: 0.625rem;
+    font-weight: 600;
   }
 `;
 
