@@ -121,7 +121,7 @@ const Wrapper = styled.footer`
         }
     }
     .social-elem{
-        width: 6rem;
+        width: 5.5rem;
         .icon{
             height:1rem;
         }
@@ -175,6 +175,13 @@ const Wrapper = styled.footer`
         grid-template-columns: 1fr;
         gap: 2rem;
         margin: 0 auto;
+        .footer-section__left{
+            position: relative;
+            .company-logo{
+                position: absolute;
+            }
+        }
+
         .footer-section__right{
         
         .footer-section__links{
