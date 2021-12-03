@@ -6,7 +6,7 @@ import backgroundImage from '../../assets/images/cover-image.jpg'
 const LandingPage = () => {
     return (
         <StlyedPage>
-            <Navbar className="nav-bar" />
+            <Navbar className="nav-bar" href=''/>
             <div className="page-wrapper">
                 <div className="page-content">
                     <div className="page-content__text">

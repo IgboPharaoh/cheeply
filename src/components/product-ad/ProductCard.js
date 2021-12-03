@@ -55,3 +55,10 @@ const StyledCard = styled.div`
 `
 
 export default ProductCard
+
+
+// transform: rotate3d(1, 0, 0, 6deg) translateX(0);
+// transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+// transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    

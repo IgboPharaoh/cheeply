@@ -5,7 +5,7 @@ import sellImage from '../../assets/images/sellhouse.jpeg'
 import leaseImage from '../../assets/images/leasehouse.jpeg'
 import buyImage from '../../assets/images/buyhouse.jpg'
 
-const ProductPage = () => {
+const Offers = () => {
     return (
         <StlyedPage>
             <div className='product-section-tagline'>
@@ -160,4 +160,4 @@ const StlyedPage = styled.section`
     }
 `
 
-export default ProductPage
+export default Offers

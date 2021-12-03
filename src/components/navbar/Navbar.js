@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from '../../assets/svgs/big-logo.svg'
-import Menu from '../../assets/svgs/menu.svg'
-import Saved from '../../assets/svgs/saved.svg'
+import logo from '../../assets/svgs/big-logo.svg'
+import menu from '../../assets/svgs/menu.svg'
+import saved from '../../assets/svgs/saved.svg'
+import darkLogo from '../../assets/svgs/darkbig-logo.svg'
+import darkMenu from '../../assets/svgs/darkmenu.svg'
+import darkSaved from '../../assets/svgs/darksaved.svg'
 
-const Navbar = ({className, padding})=>{
+const Navbar = ({className, padding, color, backgroundColor, href})=>{
     return (
-        <StyledNavbar className={className}  >
+      <>
+      {
+        href ? 
+        (
+        <BckgNavbar className={className} color={color}  backgroundColor={backgroundColor} >
                 <ul padding={padding} >
                     <div className="menu-container">
                       <li>
-                        <a href="www">
-                          <img src={Menu} alt='menu-icon' className='menu-icon'/>
+                        <a href="www">         
+                          <img src={darkMenu} alt='menu-icon' className='menu-icon'/>
                         </a>
                       </li>
                       <li>
@@ -21,45 +28,85 @@ const Navbar = ({className, padding})=>{
                     
                     <li>
                       <a href='http://'>
-                        <img src={Logo} alt='company-logo' className='company-logo'/>
+                        <img src={darkLogo} alt='company-logo' className='company-logo'/>
                       </a>
                         
                     </li>
                     <li>
                       <a href='http://'>
-                        <img src={Saved} alt='saved-icon' className='saved-icon'/>
+                        <img src={darkSaved} alt='saved-icon' className='saved-icon'/>
+                      </a>
+                    </li>
+                </ul>           
+        </BckgNavbar>
+        )
+
+          :
+
+          (
+        <StyledNavbar className={className} color={color}  backgroundColor={backgroundColor} >
+                <ul padding={padding} >
+                    <div className="menu-container">
+                      <li>
+                        <a href="www">         
+                          <img src={menu} alt='menu-icon' className='menu-icon'/>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='www' className='explore-text' >explore</a>
+                      </li>
+                    </div>
+                    
+                    <li>
+                      <a href='http://'>
+                        <img src={logo} alt='company-logo' className='company-logo'/>
+                      </a>
+                        
+                    </li>
+                    <li>
+                      <a href='http://'>
+                        <img src={saved} alt='saved-icon' className='saved-icon'/>
                       </a>
                     </li>
                 </ul>           
         </StyledNavbar>
+          )
+      }
+      </>    
     )
 }
 
-const StyledNavbar = styled.nav`
+
+
+const BckgNavbar = styled.nav`
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color:${({color}) => color || '#002e4c'} ;
+  background-color:${({backgroundColor}) => backgroundColor || 'white'} ;
+  border-bottom: 2px solid #efefef;
+  /* padding: 0.75rem 0; */
   ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-self: center;
     padding: 0 2rem;
   }
   .menu-container{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 5rem;
+    }
+    .menu-icon{
+      padding-right: 1rem;
     }
   ul li a {
     text-decoration: none;
     color: #fff;
+    color:${({color}) => color || '#002e4c'} ;
     font-weight: 300;
     font-size: 0.75rem;
     text-transform: capitalize;
-    display: inline-block;
-    margin-top: 1rem;
+    display: block;
   }
   a:hover{
     color: #2EABA9;
@@ -73,10 +120,65 @@ const StyledNavbar = styled.nav`
     ul{
       padding:0 1rem;
     }
+    .menu-icon{    
+      padding-right:0rem;
+    }
     .explore-text{
       display: none;
     }
   }
+  
+`;
+
+const StyledNavbar = styled.nav`
+  width: 100%;
+  margin: 0 auto;
+  color:${({color}) => color || 'white'} ;
+  background-color:${({backgroundColor}) => backgroundColor || ''} ;
+  /* padding: 0.75rem 0; */
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  .menu-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu-icon{
+      padding-right: 1rem;
+    }
+  ul li a {
+    text-decoration: none;
+    color: #fff;
+    color:${({color}) => color || 'white'} ;
+    font-weight: 300;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    display: block;
+  }
+  a:hover{
+    color: #2EABA9;
+  }
+  @media(min-width: 500px) and (max-width:1024px){
+    ul{
+      padding:0 1rem;
+    }
+  }
+  @media(max-width:499px){
+    ul{
+      padding:0 1rem;
+    }
+    .menu-icon{    
+      padding-right:0rem;
+    }
+    .explore-text{
+      display: none;
+    }
+  }
+  
 `;
 
 export default Navbar;

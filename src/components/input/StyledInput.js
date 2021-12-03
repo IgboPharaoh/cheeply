@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Button from '../button/Button'
 
 const StyledInput = ({
-  text,
   placeholder,
   value,
   classname,
@@ -19,7 +18,7 @@ const StyledInput = ({
   return (
     <Section sectionBorder={sectionBorder} sectionBackgroundColor={sectionBackgroundColor} sectionWidth={sectionWidth} sectionHeight={sectionHeight} >
       <input
-        type={text}
+        type='email'
         placeholder={placeholder}
         value={value}
         className={classname}
@@ -27,6 +26,7 @@ const StyledInput = ({
         fontWeight={fontWeight}
         color={color}
         inputBackgroundColor={inputBackgroundColor}
+        required
       />
       <div>
         <Button buttonWidth='100%' buttonHeight='100%' buttonBackgroundColor='#fff' fontSize='0.75' buttonText="SUBSCRIBE" fontWeight='600' border='none'/>
